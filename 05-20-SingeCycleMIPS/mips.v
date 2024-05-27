@@ -110,3 +110,29 @@ module ALUDECODER(
   // TODO -- Write ALU Decoder here
 endmodule
 
+
+/*
+ * TODO -- Data Path
+ */ 
+module DATAPATH(
+  input wire i_clk_w,
+  input wire i_rst_w,
+  input wire i_mem_to_reg_w,  
+  input wire i_pc_src_w,
+  input wire i_alu_src_w,
+  input wire i_reg_dst_w,
+  input wire i_reg_write_w,
+  input wire i_jump_w,
+  input wire [2:0] i_alu_control_w,
+  output wire o_zero_w,
+  output wire [31:0] o_pc_w,
+  output wire [31:0] o_instr_w,
+  output wire [31:0] o_alu_out_w,
+  output wire [31:0] o_write_data_w,
+  output wire [31:0] o_read_data_w,
+  );
+
+  // TODO -- Write Data Path here
+endmodule
+
+
