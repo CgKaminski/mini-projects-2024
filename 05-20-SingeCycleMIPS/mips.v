@@ -53,3 +53,21 @@ module DMEM(
 
   // TODO -- Write Data Memory here
 endmodule
+
+/*
+ * TODO -- Controller
+ */
+module CONTROLLER(
+  input wire i_zero_w,
+  input wire [5:0] i_op_w,
+  input wire [5:0] i_funct_w,
+  output wire o_mem_to_reg_w,
+  output wire o_mem_write_w,
+  output wire o_pc_src_w,
+  output wire o_alu_src_w,
+  output wire o_reg_write_w,
+  output wire o_reg_dst_w,
+  output wire o_jump_w,
+  output wire [2:0] o_alu_control_w
+  );
+
