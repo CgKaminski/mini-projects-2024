@@ -12,6 +12,7 @@ module TOP(
 
 endmodule
 
+
 /*
  * TODO -- MIPS Processor
  */
@@ -29,6 +30,7 @@ module MIPS(
   // TODO -- Write MIPS Processor here
 endmodule 
 
+
 /*
  * TODO -- Instruction Memory
  */
@@ -39,6 +41,7 @@ module IMEM(
 
   // TODO -- Write Instruction Memory here
 endmodule
+
 
 /*
  * TODO -- Data Memory
@@ -53,6 +56,7 @@ module DMEM(
 
   // TODO -- Write Data Memory here
 endmodule
+
 
 /*
  * TODO -- Controller
@@ -74,3 +78,18 @@ module CONTROLLER(
   // TODO -- Write Controller here
 endmodule
 
+
+/*
+ * TODO -- Main Decoder
+ */
+module MAINDECODER(
+  input wire [5:0] i_op_w,
+  output wire o_mem_to_reg_w,
+  output wire o_mem_write_w,
+  output wire o_branch_w,
+  output wire 0_alu_src_w,
+  output wire o_reg_dst_w,
+  output wire o_reg_write_w
+  output wire o_jump_w,
+  output wire [1:0] o_alu_op_w
+  );
