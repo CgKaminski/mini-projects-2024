@@ -93,3 +93,20 @@ module MAINDECODER(
   output wire o_jump_w,
   output wire [1:0] o_alu_op_w
   );
+
+  // TODO -- Write Main Decoder here
+endmodule
+
+
+/*
+ * TODO -- ALU Deconder
+ */
+module ALUDECODER(
+  input wire [5:0] i_funct_w,
+  input wire [1:0] i_alu_op_w,
+  output wire [2:0] o_alu_control_w
+  );
+
+  // TODO -- Write ALU Decoder here
+endmodule
+
