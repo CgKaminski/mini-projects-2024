@@ -71,3 +71,6 @@ module CONTROLLER(
   output wire [2:0] o_alu_control_w
   );
 
+  // TODO -- Write Controller here
+endmodule
+
