@@ -136,3 +136,18 @@ module DATAPATH(
 endmodule
 
 
+/*
+  * TODO -- ALU
+  */
+module ALU(
+  input wire [31:0] i_a_w,
+  input wire [31:0] i_b_w,
+  input wire [2:0] i_alu_control_w,
+  output wire [31:0] o_alu_out_w,
+  output wire o_zero_w
+  );
+
+  // TODO -- Write ALU here
+endmodule
+
+
