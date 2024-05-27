@@ -147,7 +147,22 @@ module ALU(
   output wire o_zero_w
   );
 
-  // TODO -- Write ALU here
+  wire [31:0] cond_inv_b_w;
+  wire [31:0] sum_w;
+
+  assign cond_inv_b_w = i_alu_control_w[2] ? ~i_b_w : i_b_w;
+  assign sum_w = i_a_w + cond_inv_b_w + i_alu_control_w[2];
+
+  always @* begin
+    case(i_alu_control_w[1:0])
+      2'b00: o_alu_out_w = i_a_w & i_b_w;
+      2'b01: o_alu_out_w = i_a_w | i_b_w;
+      2'b10: o_alu_out_w = sum_w;
+      2'b11: o_alu_out_w = sum[31];
+    endcase 
+  end
+
+  assign o_zero_w = (o_alu_out_w == 32'b0);
 endmodule
 
 
