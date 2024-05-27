@@ -151,4 +151,67 @@ module ALU(
 endmodule
 
 
-/
+/*
+ * TODO -- Adder Module
+ */
+module ADDER(
+  input wire [31:0] i_a_w,
+  input wire [31:0] i_b_w,
+  output wire [31:0] o_sum_w
+  );
+
+  // TODO -- Write Adder here
+endmodule
+
+
+/*
+ * TODO Left Shifter by 2
+ */
+module SHIFTER(
+  input wire [31:0] i_a_w,
+  output wire [31:0] o_shifted_w
+  );
+
+  // TODO -- Write Shifter here 
+endmodule
+
+
+/*
+ * TODO -- Sign Extender
+ */
+module SIGNEXTENDER(
+  input wire [15:0] i_a_w,
+  output wire [31:0] o_extended_w
+  );
+
+  // TODO -- Write Sign Extender here
+endmodule
+
+
+/*
+ * TODO -- Flop Module
+ */
+module FLOP #(parameter WIDTH = 8)(
+  input wire i_clk_w,
+  input wire i_rst_w,
+  input wire i_d_w,
+  output wire o_q_w
+  );
+
+  // TODO -- Write Flop here
+endmodule
+
+
+/*
+ * TODO -- Mux Module
+ */
+module MUX(
+  input wire i_sel_w,
+  input wire [31:0] i_a_w,
+  input wire [31:0] i_b_w,
+  output wire [31:0] o_y_w
+  );
+
+  // TODO -- Write Mux here
+endmodule
+
