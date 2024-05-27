@@ -160,7 +160,7 @@ module ADDER(
   output wire [31:0] o_sum_w
   );
 
-  // TODO -- Write Adder here
+  assign o_sum_w = i_a_w + i_b_w;
 endmodule
 
 
@@ -172,7 +172,7 @@ module SHIFTER(
   output wire [31:0] o_shifted_w
   );
 
-  // TODO -- Write Shifter here 
+  assign o_shifted_w = i_a_w << 2;
 endmodule
 
 
@@ -184,7 +184,7 @@ module SIGNEXTENDER(
   output wire [31:0] o_extended_w
   );
 
-  // TODO -- Write Sign Extender here
+  assign o_extended_w = {{16{i_a_w[15]}}, i_a_w};
 endmodule
 
 
@@ -198,20 +198,24 @@ module FLOP #(parameter WIDTH = 8)(
   output wire o_q_w
   );
 
-  // TODO -- Write Flop here
+  always @(posedge i_clk_w or posedge i_rst_w)
+    if (i_rst_w)
+      o_q_w <= 0;
+    else
+      o_q_w <= i_d_w;
 endmodule
 
 
 /*
  * TODO -- Mux Module
  */
-module MUX(
-  input wire i_sel_w,
-  input wire [31:0] i_a_w,
-  input wire [31:0] i_b_w,
-  output wire [31:0] o_y_w
+module MUX #(parameter WIDTH = 8) (
+  input wire i_s_w,
+  input wire [WIDTH-1:0] i_a_w,
+  input wire [WIDTH-1:0] i_b_w,
+  output wire [WIDTH-1:0] o_y_w
   );
 
-  // TODO -- Write Mux here
+  assign o_y_w = i_s_w ? i_b_w : i_a_w;
 endmodule
 
