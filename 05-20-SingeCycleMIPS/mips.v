@@ -137,8 +137,8 @@ endmodule
 
 
 /*
-  * TODO -- ALU
-  */
+ * TODO -- ALU
+ */
 module ALU(
   input wire [31:0] i_a_w,
   input wire [31:0] i_b_w,
@@ -151,3 +151,4 @@ module ALU(
 endmodule
 
 
+/
